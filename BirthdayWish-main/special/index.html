@@ -1,0 +1,146 @@
+<html>
+
+<head >
+    <title>Happy Birthday</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auto-slider{
+    position: relative;
+    box-sizing: content-box;
+    display: inline-block;
+    padding: 10px 10px 20px;
+    background: #005A8D;
+    max-width: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+
+    }
+
+
+    @keyframes sliding{
+                0%{left: 0%; }
+                20%{left: -100%;}
+                40%{left: -200%;}
+                60%{left: -300%;}
+                80%{left: -400%;}
+                100%{left: 0%;}
+            }        
+            
+    @keyframes indicating{
+                from{
+                    left: -100%;
+                }
+                to{
+                    left: 0;
+                }
+    }  
+            
+            
+    div#slider { overflow: hidden; }
+    div#slider figure img { width: 20%; float: left; }
+    div#slider figure { 
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 25s sliding ease infinite; 
+    }
+
+    /* Slider indicator */
+    .indicator{
+        width: 100%;
+        max-width: 720px;
+        height: 6px;
+        background: #e41b17;
+        position: absolute;
+        bottom: 0;
+        
+        animation: indicating 5s ease infinite; 
+        
+    }
+    </style>
+</head>
+
+<body style="background-color: #FF96AD;">
+    <div class="container">
+        <div class="row">
+            <div class="loader">
+                <button id="play">Start</button>
+            </div>
+        </div>
+    </div>
+    <audio class="song" controls loop>
+        <source src="music.mp3">
+        </source>
+        Your browser isn't invited for super fun audio time.
+    </audio>
+    <div class="main" style="background-color: #FF96AD;">
+        <div class="container pt-5">
+            <div class="row">
+
+                <!-- <div class="col-12 col-xl-6 mx-auto">
+                    <img src="img/banner.png" alt="">
+                </div> -->
+                <div class="col-rt-12">
+                    <div class="Scriptcontent">
+                    
+                    <section class="auto-slider">
+                    <div id="slider">
+                    <figure>
+                    <img src="img/image-1.jpg" alt="Image">
+                    <img src="img/image-2.jpg" alt="Image">
+                    <img src="img/image-3.jpg" alt="Image">
+                    <img src="img/image-4.jpg" alt="Image">
+                    <img src="img/image-5.jpg" alt="Image">
+                    </figure>
+                    <div class="indicator"></div>
+                    </div>
+                    </section>
+                    
+                    </div>
+                    </div>
+                <div class="col-12  text-center">
+                    <div id="name"style="color: #007bff;" class="area">Piu</div>
+                </div>
+
+                <div class="col-12 text-center">
+                    <div class="type-wrap"style="color: #007bff;">
+                        <div id="typed-strings" class="typing" >
+                            <h2>Happy Birthday <i id="nae">Piu</i></h2>
+                            <h2>Have a wonderful day</h2>
+                            <h2>Filled with joy and happiness.</h2>
+                        </div>
+                        
+                        <span id="typed" style="white-space:pre;"></span>
+                    </div><br>
+                    <a style="color: white;" href="chatboot/index.html">There are some important messages for you, click here to see </a>
+
+                </div>
+                </div>
+            
+            </div>
+        </div>
+        <img src="img/Balloon-Border.png" width="100%" class="balloon-border"> 
+    </div>
+    <img src="img/Balloon-Border.png" width="100%" class="balloon-border">
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'UA-76614800-1');
+      </script>
+</body>
+<script src="https://unpkg.com/magic-snowflakes/dist/snowflakes.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/typed.min.js"></script>
+<script src="js/script.js"></script>
+
+</html>
